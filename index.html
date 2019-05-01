@@ -11,8 +11,8 @@
 </head>
 <body>
     <!-- header starts -->
-    <header class="header">
-        <div class="nav mobileHidden">
+    <header class="header wrapper">
+        <div class="nav nearMobileHidden">
             <ul class="clearfix">
                 <li class="links"><a class="active" href="#">Home</a></li>
                 <li class="links"><a href="#">About</a></li>
@@ -20,8 +20,8 @@
                 <li class="links"><a href="#">Contact</a></li>
             </ul>
         </div>
-        <img class="mobileAppear hambergerM" src="assets/hamburgerMenu.png" alt="hamburgerMenu">
-        <ul class="socialMedia mobileHidden">
+        <img class="hambergerM" src="assets/hamburgerMenu.png" alt="hamburgerMenu">
+        <ul class="socialMedia nearMobileHidden">
             <li class="social">
                 <a href="#" aria-label="go to Foot Forward's instagram page">
                     <i aria-hidden class="fab fa-instagram"></i>
@@ -52,7 +52,7 @@
     <!-- header ends -->
     <!-- main parts starts -->
     
-    <main class="clearfix">
+    <main class="clearfix wrapper">
         <!-- posts with pictures begins -->
         <div class="wrapper1">
             <div class="info info1 clearfix">
@@ -117,16 +117,16 @@
         <div class="info4">
             <div class="userService clearfix">
                 <div class="icon">
-                    <i class="fas fa-shopping-bag"></i>
+                    <i class="fas fa-shopping-bag" aria-hidden="true"></i>
                     <a href="#"><P>Products</P></a>
                 </div>
                 <div class="icon">
-                    <i class="fas fa-users"></i>
+                    <i class="fas fa-users" aria-hidden="true"></i>
                     <a href="#"><P>Community</P></a>
                     
                 </div>
                 <div class="icon">
-                    <i class="fas fa-phone"></i>
+                    <i class="fas fa-phone" aria-hidden="true"></i>
                     <a href="#"><P>Reach out</P></a>
                 </div>
             </div>
@@ -150,16 +150,15 @@
         <!-- gallery ends -->
     </main>
     <!-- main part ends -->
-    <footer>
+    <footer class="wrapper">
         <div class="footerWrapper">
-            <div class="menuSmall clearfix">
-                <ul>
+                <ul class="menuSmall clearfix">
                     <li class="links"><a href="#">Home</a></li>
                     <li class="links"><a href="#">About</a></li>
                     <li class="links"><a href="#">Blog</a></li>
                     <li class="links"><a href="#">Contact</a></li>
                 </ul>
-            </div>
+            
             <div class="contactWrapper clearfix">
                 <div class="contact">
                     <h3>Contact</h3>
@@ -178,7 +177,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>  
         
         <div class="copyright">Copyright &copy; 2019 HackerYou</div>
     </footer>

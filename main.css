@@ -11,66 +11,44 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 /* setup ends */
 
-
-
-
+/* some settings for body and show some classes in the desktop layout */
 html {
     /* initializng fonts */
     font-family: "Nova Flat", cursive;
     font-size: 20px;
     color:#186684;
 }
-
-body{
-    margin:0;
-    
-    
-    
+body {
+    margin:0; 
 }
-.mobileAppear {
+.wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
+    min-width: 320px;
+}
+.mobileAppear,
+.middleAppear,
+.hambergerM {
     display: none;
 }
-.middleAppear {
-    display: none;
-}
-
-
+/* start from desktop layouts */
 /* header */
-
 header {
-
+    height: 800px;
+    position:relative;
     padding:1.5rem 0;
-
     background:url("assets/image1.png");
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center center;
     text-align: center;
-    height: 800px;
-
-    position:relative;
-
-    
-
 }
-
-
-
-ul,  
-li.links {
-    margin-top: 0;
-
+ul {
+    padding-left: 0;
 }
 li.links {
     text-align: center;
     list-style-type: none;
-    /* display: inline-block; */
-}
-
-ul {
-    
-    padding-left: 0;
-    
 }
 
 .nav ul {
@@ -79,29 +57,18 @@ ul {
     padding: 0 2rem;
 }
 .nav .links {
-    
-    /* margin:0 33px; */
     float: left;
     width: 25%;
-    
-    
 }
-
 a {
     /* need to specify the font style in <a> tags */
     text-decoration: none;
     color:#186684;
 }
-
-a:hover {
-    color:#e85b26;
-}
-
+a:hover, 
 a.active {
     color:#e85b26;
 }
-
-
 
 .socialMedia {
     position: absolute;
@@ -111,78 +78,62 @@ a.active {
     list-style-type: none;
     font-size: 1.2rem;
 }
-
 .socialMedia li {
     margin-bottom: 0.8rem;
 }
-
+/* need to specify color in the socialmedia icons */
 .socialMedia a {
     color:#e85b26;
-
 }
+
 .title {
-    
-    background :rgba(227, 228, 234, 0.89);
     position: absolute;
-    /* top:10rem; */
     top: 46.8%;
-    /* left:23.25rem; */
     right:22.3%;
-    line-height:6rem;
-    /* width:calc(100% - 33.25rem); */
     padding:15px;
-    text-align: start;
-    
+    background :rgba(227, 228, 234, 0.89);
+    line-height:6rem;
+    text-align: left;
 }
-
 .title h1 {
-    font-size:7.32rem;
     margin:0;
+    font-size:7.32rem;
     font-weight: lighter;
 }
+/* header ends */
+
 /* main content */
-
-
 img {
     width: 100%;
     max-width: 100%;
     display: block;
 }
-
 .info div {
     float:left;
     color:#186684;
-    
 }
 .info .text {
     width:49.8%;
     background-color:#fdfdfd;
-    
 }
-
 .info .image {
     width:50.2%;
 }
-
 .info h2 {
+    margin-bottom: 0.4rem;
+    margin-top:0;
     font-size: 2.1rem;
     letter-spacing: 0.045rem;
     font-weight: lighter;
-
-    margin-bottom: 0.4rem;
-    margin-top:0;
 }
-
 .info p {
+    padding-bottom:0.65rem;
+    margin-top:0.2rem;
     font-family:"Catamaran";
     color:#1f2022;
     font-size: 1rem;
     line-height: 1.45rem;
-    padding-bottom:0.65rem;
-    margin-top:0.2rem;
-    /* margin-bottom:1.7rem; */
 }
-
 .info a {
     border:3px solid red;
     padding:12px 14px;
@@ -190,14 +141,13 @@ img {
     text-transform: uppercase;
 }
 
-.info1 .image{
+.info1 .image {
     float:right;
 }
-.info1 .text{
+.info1 .text {
     padding: 7.2rem 5rem 3.2rem 8rem;
 }
-
-.info2 .text{
+.info2 .text {
     padding:7.2rem 8rem 3.2rem 5rem;
 }
 
@@ -205,42 +155,26 @@ img {
     padding:5.4rem 8rem;
     background:#f4f4f4;
 }
-
+.info3 .imageSmall:first-child {
+    width:24%;
+}
 .info3 .text {
     width: 76%;
     padding-left: 2.1rem;
     background:#f4f4f4;
-
-    
-
 }
-
-.info3 .imageSmall:first-child {
-    width:24%;
-}
-
 
 .info4 {
-    /* clear:both; */
-    /* width:100vw; */
-    overflow: hidden;
-
+    margin: 0;
     padding-top:5.35rem;
     padding-bottom:5.35rem;
-
-
     background: url(assets/image5.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 19.2% center;
-
-
-    margin: 0;
 }
-
-.userService    {
+.userService {
     width:49%;
-
     margin: 0 auto;
     padding:2.5rem 1.7rem 2.2rem;
     background: #f4f4f4;
@@ -249,38 +183,25 @@ img {
     font-size:1.5rem;
     font-weight: 600;
     text-align: center;
-
 }
-
 .userService .icon {
-    /* display: inline-block; */
-    /* margin:1.2rem 2.2rem; */
-
-    
     float:left;
     margin: 0 1.7rem;
     width:calc((100% - 10.2rem) /3);
-    /* height: 8rem; */
 }
 .userService .fas {
     font-size: 2rem;
     color:#e85b26;
     line-height: 4.1rem;
-
 }
-
+/* the shopping bag icon seems to be significantly larger than the other two */
 .userService .fa-shopping-bag{
     font-size: 3.35rem;
 }
-
-
 .userService p {
     margin-top: 0;
     margin-bottom: 0.8rem;
     letter-spacing: 0.02rem;
-
-
-
 }
 
 .gallery {
@@ -288,86 +209,59 @@ img {
     text-align: center;
     background:#fdfdfd;
 }
-
-
 .gallery h2 {
     margin: 0.2rem auto 3.5rem;
-    /* position: absolute;
-    top:20%;
-    left:48%; */
 }
-
-
-
 .galleryWrapper {
-    /* margin: 0 auto; */
     width:100%;
     padding:0.2rem 0 0;
 }
-
 .galleryWrapper img {
-    margin:1rem;
     float:left;
+    margin:1rem;
     width:calc((100% - 6rem) /3);
 }
-
+/* main section ends*/
 
 /* footer section */
-
 footer {
     background: #eeeeee;
     color:#1f2022;
 }
-
 .footerWrapper {
     padding: 3.7rem 8rem;
-
 }
-
-
 .menuSmall {
     width:26%;
     margin:0 auto;
-    text-align: center;
     padding: 0 1rem;
-}
-
-.menuSmall ul {
-    width: 100%;
+    text-align: center;
 }
 .menuSmall .links {
-    /* margin:0 17px; */
     float:left;
     width:25%;
 }
-.footerWrapper h3 {
-    font-size: 2.1rem;
-    color:#e85b26;
-    font-weight: lighter;
-    margin-bottom:0.45rem;
-    
-}
-.footerWrapper p {
-    font-family: "Catamaran";
-    line-height: 1.45rem;
-    margin:0;
-
-}
-
-
-
 /* specify the font color in the <a> tag*/
 .menuSmall a {
     color:#1f2022;
 }
-
+.footerWrapper h3 {
+    margin-bottom:0.45rem;
+    font-size: 2.1rem;
+    color:#e85b26;
+    font-weight: lighter;
+}
+.footerWrapper p {
+    margin:0;
+    font-family: "Catamaran";
+    line-height: 1.45rem;
+}
 .contact,
 .form {
     float:left;
     width:50%;
 }
-
-/* the distances between the headings and the text under them in the left and right part of the footer  are slightly different */
+/* the distances between the headings and the text under headings in the left and the right part of the footer are slightly different */
 .form h3 {
     margin-bottom: 0;
 }
@@ -382,170 +276,121 @@ input,
 }
 input {
     width:70%;
-    display: block;
 }
-
+/* make sure the place holder and the input user typed are shown in the same way*/
 input, 
 input::placeholder {
+    padding:6px 5px 6px 15px;
     color:#232323;
     opacity: 1;
     font-size: 1rem;
     font-family: "Catamaran";
-    padding:6px 5px 6px 15px;
-
-
 }
+
 .btn {
     width:30%;
+    padding:5px 12.5px;
+    border:3px inset #fa3d06;
     background:#186684;
     color:#ffffff;
     text-transform: uppercase;
     font-weight: lighter;
     letter-spacing: 0.015rem;
     font-size: 1rem;
-    padding:5px 12.5px;
-    border:3px inset #fa3d06;
 }
-
-
-
-
-
-
 .copyright {
     width:100%;
+    padding:0.5rem 0;
     background: #000;
     color:rgba(252, 252, 252, 0.5);
     /* this color is the same as #fcfcfc and opacity 0.5 set in the design */
-
     text-align: center;
     font-family: "Catamaran";
     font-weight: 600;
     font-size:0.9rem;
     letter-spacing: 0.012rem;
-
-
-    padding:0.5rem 0;
 }
 
-
 /* responsiveness begins  */
-
 @media (max-width:1592px) {
-    header{
+    /* make the background image change its size "automatically" with the viewport and keep its shape by set the height of header to change accordingly based on the image's scale*/
+    header {
         background-size: 100% 100%;
         height: 50vw;
-
     }
     /* change text display a little bit */
     .info h2 {
         margin-bottom: 0.3rem;
     }
-    
     .info P {
-        line-height: 1.35rem;
         padding-bottom: 0.4rem;
+        line-height: 1.35rem;
     }
-
     /* change the ratio between the text and image in the info3 */
-    .info3 .text {
-        width:72%;
-    
-    }
     .info3 .imageSmall:first-child {
         width:28%;
     }
+    .info3 .text {
+        width:72%;
+    }
+
     .gallery h2 {
         margin-bottom: 3rem;
     }
-
-
 }
 
 @media (max-width: 1480px) {
-
-    /* lifting title in the header a little */
-    /* .title{
-        top:17rem;
-        right: 15.5rem;
-    } */
-
     /* shrink the size of the title */
     .title h1 {
         font-size: 6.9rem;
         letter-spacing: 0.039rem;
     }
-
-    /* change related paddings in the overall display of the page */
-
-    .info1 .text{
+    /* change related left-right paddings in the overall display of the page */
+    .info1 .text {
         padding: 6.8rem 5rem 3.2rem 6rem;
     }
-
-    .info2 .text{
+    .info2 .text {
         padding:6.8rem 6rem 3.2rem 5rem;
     }
-
     .info3 {
-    padding:5.2rem 6rem;
-    background:#f4f4f4;
+        padding:5.2rem 6rem;
+        background:#f4f4f4;
     }
-
+    /* gallery images have 1rem margin with them so the gallery padding will usually be 1rem less than other paddings */
     .gallery {
         padding:4rem 5rem;
     }
-
     .footerWrapper {
         padding:3.5rem 6rem;
     }
-
     /* reduce the paddings in the "read more" buttons */
-
     .info a {
         padding: 9px 11px;
     }
-
 }
 
 @media (max-width: 1390px) {
-    /* lifting title and the socialmedia icons in the header a little */
-    /* .title{
-        top:16.9rem;
-        right: 12rem;
-    } */
-
-    /* .socialMedia {
-        top:12rem;
-    } */
-
     /* shrink the title font size agian */
     .title h1 {
         font-size: 6.5rem;
     }
-
     /* reduce related paddings in the overall display of the page */
-
-    .info1 .text{
+    .info1 .text {
         padding: 6rem 5rem 3.2rem 5rem;
     }
-
-    .info2 .text{
+    .info2 .text {
         padding:6rem 5rem 3.2rem 5rem;
     }
-
     .info3 {
-    padding:4rem 5rem;
-    background:#f4f4f4;
+        padding:4rem 5rem;
+        background:#f4f4f4;
     }
-
     .gallery {
         padding:3rem 4rem;
     }
-
     .footerWrapper {
         padding:3rem 5rem;
     }
-
     /* reduce the line height and other text display */
     .info h2 {
         margin-bottom: 0.2rem;
@@ -553,30 +398,18 @@ input::placeholder {
     .gallery h2 {
         margin-bottom: 2rem;
     }
-    
-    /* .info P {
-        line-height: 1.15rem;
-        padding-bottom: 0.4rem;
-        margin-top:0.4rem;
-    } */
-
     /* change the ratio between the text and image in the info3 */
-    .info3 .text {
-        width:69%;
-    
-    }
     .info3 .imageSmall:first-child {
         width:31%;
     }
-
+    .info3 .text {
+        width:69%;
+    }
     /* reduce margin between icons in the userService section */
-    
     .userService .icon {
         margin: 0 0.8rem;
         width:calc((100% - 4.8rem) /3);
-
     }
-
 }
 
 @media (max-width: 1280px) {
@@ -585,7 +418,6 @@ input::placeholder {
         top:45%;
         right:21%;
         line-height: 5.2rem;
-
     }
     .title h1 {
         font-size: 6.25rem;
@@ -597,22 +429,17 @@ input::placeholder {
     .menuSmall {
         width:37%;
     }
-
     /* reduce the top paddings in the info1 info2 divs */
-    .info1 .text{
+    .info1 .text {
         padding: 4.7rem 5rem 3rem 5rem;
     }
-
-    .info2 .text{
+    .info2 .text {
         padding:4.7rem 5rem 3rem 5rem;
     }
-
     /* change the ratio between the image and the text in info3 div */
-
     .info3 .text {
         width:61%;
         padding-left: 1.7rem;
-
     }
     .info3 .imageSmall:first-child {
         width: 39%;
@@ -621,12 +448,10 @@ input::placeholder {
     .userService {
         width: 60%;
     }
-
 }
 
 @media (max-width:1190px)  {
     /* shrink and lift title */
-
     .title {
         top:42%;
         right:22%;
@@ -635,52 +460,40 @@ input::placeholder {
     .title h1 {
         font-size: 5.8rem;
     }
-    /* enlarge the image in the info3 again */
-    
+    /* make the h2 in divs smaller */
+    .info h2 {
+        margin-bottom: 0.2rem;
+        font-size: 1.8rem;
+    }
     .info p {
         padding-bottom: 0.3rem;
     }
-    .info3 .text {
-        width:51%;
-        padding-left: 1.7rem;
-
-    }
-    .info3 .imageSmall:first-child {
-        
-        width: 49%;
-
-    }
-    /* make the h2 in divs smaller */
-    .info h2 {
-        font-size: 1.8rem;
-        margin-bottom: 0.2rem;
-    }
-    
-
-    /* reduce the top-bottom padding in info1 info2 and info3*/
-    .info1 .text{
+    /* reduce the top-bottom padding in info1,2 and 3*/
+    .info1 .text {
         padding: 3.1rem 4rem 2rem 5rem;
     }
 
-    .info2 .text{
+    .info2 .text {
         padding:3.1rem 5rem 2rem 4rem;
     }
     .info3 {
-    padding:2.8rem 5rem;
+        padding:2.8rem 5rem;
     }
-
+    /* enlarge the image in the info3 again */
+    .info3 .imageSmall:first-child {
+        width: 49%;
+    }
+    .info3 .text {
+        width:51%;
+    }
 }
 
-
-
 @media (max-width:1160px) {
-    /* change the left-right padding in the overall layout (the padding for info3 is under the unfloat part)*/
-
-    .info1 .text{
+    /* change the left-right padding in the overall layout (the padding for info3 is under the unfloat part and is made up by info3 padding and info3.text padding now)*/
+    .info1 .text {
         padding: 2rem 3rem 2rem 4rem;
     }
-
-    .info2 .text{
+    .info2 .text {
         padding:2rem 4rem 2rem 3rem;
     }
     .gallery {
@@ -689,38 +502,34 @@ input::placeholder {
     .footerWrapper {
         padding: 2.5rem 4rem;
     }
-
-    /* begin to un float some of the large elements */
+    /* begin to unfloat some of the large elements */
     .info3 {
-    padding:3rem 3rem;
+        padding:3rem 3rem;
     }
-    .info3 div{
+    .info3 div {
         float:none;
-
     }
-
     /* try to find some middle point for the info3 layout between the desktop and mobile layouts  */
-    .info3 .text {
-        width: 100%;
-        padding: 2rem 1rem 1rem;
-
-        text-align: left;
-    }
-    .info3 a {
-        display: block;
-        width: 25%;
-        text-align: center;
-        margin: 0 auto;
-    }
     .info3 .imageSmall:first-child {
         width: 60%;
         margin: 0 auto;
+    }
+    .info3 .text {
+        width: 100%;
+        padding: 2rem 1rem 1rem;
+        text-align: center;
+    }
+    .info3 p {
+        text-align:left;
+    }
+    /* the readmore link in mobile layout has considerable length and I use padding to achieve it  */
+    .info3 a {
+        padding:10px 40px;
     }
     /* widen userService div in info 4 again */
     .userService {
         width: 70%;
     }
-
     /* shrink the button in the footer */
     .btn {
         font-size: 0.9rem;
@@ -733,18 +542,15 @@ input::placeholder {
         top:42%;
         right:19%;
         line-height: 4.9rem;
-
     }
     .title h1 {
         font-size: 5.5rem;
     }
-
     /* change the left-right padding in overall layout agian */
-    .info1 .text{
+    .info1 .text {
         padding: 2rem 3rem 2rem 2.5rem;
     }
-
-    .info2 .text{
+    .info2 .text {
         padding:2rem 2.5rem 2rem 3rem;
     }
     .gallery {
@@ -752,24 +558,21 @@ input::placeholder {
     }
     .info3 {
         padding: 3rem 1.5rem;
-
     }
-
     .footerWrapper {
-        padding: 1rem 2.5rem;
+        padding: 2rem 2.5rem;
     }
 }
 
 @media (max-width:974px) {
     /* unfloat more elements  */
-    /* change some image source to style the layout better*/
+    /* change some image source to style the layout better(use mobilesize pictures for their scale but choose the middle level of resolution)*/
     .middleHidden {
         display: none;
     }
     .middleAppear {
         display: block;
     }
-    
     /* header */
     header {
         padding:0.8rem 0;
@@ -777,62 +580,51 @@ input::placeholder {
     .nav ul {
         width:70%;
     }
-
     .title {
         top:39%;
-        right:16%;
+        right:17.5%;
         line-height: 4.2rem;
-
     }
     .title h1 {
         font-size: 4.8rem;
     }
-
-    .footerWrapper {
-        padding: 0.4rem 2.5rem 1.3rem;
-    }
-    .menuSmall {
-        width:65%;
-    }
-    
     /* main section */
     .info div {
         float:none;
     }
     
-    .info  .image {
+    .info  .image,
+    .info .text {
         width:100%;
     }
-
-    .info h2 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    .info1 .image{
+    /* have to unfloat the image in info1 specifically because when I first float it the i select .info1 .image */
+    .info1 .image {
         float:none;
     }
-    
-    .info .text{
-        width: 100%;
+    .info .text {
         text-align: center;
-
-    
+    }
+    .info h2 {
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
     }
     .info1 .text,
     .info2 .text {
         padding:3rem 2.5rem;
     }
-
     .info3 {
         padding: 1.5rem 1.5rem 2rem;
-
     }
-
     .userService {
         width: 90%;
     }
     /* footer */
-
+    .footerWrapper {
+        padding: 1.9rem 2.5rem 1.3rem;
+    }
+    .menuSmall {
+        width:65%;
+    }
     .btn {
         font-size: 0.8rem;
     }
@@ -845,137 +637,126 @@ input::placeholder {
         right:18.5%;
         padding: 8px;
         line-height: 3.5rem;
-
     }
     .title h1 {
         font-size: 4rem;
     }
     .socialMedia {
-    right:3.5%;
-    top:30%;
-
-    font-size: 1rem;
-}
-
+        right:3.5%;
+        top:30%;
+        font-size: 1rem;
+    }
     /* unfloat the footer child divs */
-
     .contact,
     .form {
         float:none;
-        display: block;
         width:100%;
-
-        text-align: center;
         margin-bottom: 1.5rem;
-    }
-
-    .form p {
+        text-align: center;
         font-size: 0.9rem;
     }
-
     input,
     .btn {
         float:none;
         width: 60%;
     }
     input {
-        display: block;
         margin: 0 auto;
     }
-
 }
 
 @media (max-width:766px) {
-    /* shrink paddings in the gallery div and title font sizes, enlarge two menu uls */
+    /* shrink title font sizes and paddings in the gallery div,  enlarge two menu uls */
     .nav ul,
     .menuSmall {
         width: 90%;
     }
-
-
     .title {
         top:39.5%;
         right:23%;
         padding: 8px;
         line-height: 3rem;
-
     }
     .title h1 {
         font-size: 3.2rem;
     }
-
     .gallery {
         padding:0.7rem 1.5rem;
     }
-
 }
 
 @media (max-width:640px) {
-
-    /* reduce the padding in the userService div */
-    
-    .userService .icon {
-        margin: 0 0.4rem;
-        width:calc((100% - 2.4rem) /3);
-
+    /* shrink the socialmedia icons in the header */
+    .socialMedia {
+        right:3.5%;
+        top:26%;
+        font-size: 0.95rem;
     }
+    .socialMedia li {
+        margin-bottom: 0.3rem;
+    }
+    /* reduce the padding for the userService and margin for userService icons*/
     .userService {
         padding: 1rem 0.5rem 0.8rem;
     }
-
+    .userService .icon {
+        margin: 0 0.4rem;
+        width:calc((100% - 2.4rem) /3);
+    }
 }
 
 @media (max-width:572px) {
+    /* hide the menu and socialmedia icons and show a hamburger menu */
+    .nearMobileHidden {
+        display: none;
+    }
+    .hambergerM {
+        display: block;
+        width:40px;
+        position: absolute;
+        right:23px;
+        top:20px;
+    }
     .title {
         top:42%;
         right:25%;
         padding: 5px;
         line-height: 2.5rem;
-
     }
     .title h1 {
         font-size: 2.7rem;
     }
-    
     .userService {
         width: 60%;
     }
     .info3 a {
         width:35%;
     }
-
     .userService .icon {
         float:none;
         width: 100%;
-        display: block;
         margin:0.35rem auto;
         padding-bottom:0.85rem;
-
-
     }
 }
 
 @media (max-width:500px) {
-     .title {
+    .title {
         top:42%;
         right:27%;
         padding: 5px;
         line-height: 2rem;
-
     }
     .title h1 {
         font-size: 2rem;
     }
-
     input,
     .btn {
         float:none;
         width: 80%;
     }
 }
-
-
-
+/* mobile layout */
 @media (max-width:400px) {
 
     /* header */
@@ -987,131 +768,60 @@ input::placeholder {
     .mobileAppear {
         display: block;
     }
-
+    /* header */
     header {
-    background:url("assets/image1Mobile.png");
-    background-position:100% 100%;
-    background-size:cover;
-    height: 149.75vw;
-
-    padding:1.2rem 0 7.3rem;
-    position:relative;
-
+        /* make the background image scales propotionally */
+        position:relative;
+        height: 149.75vw;
+        padding:1.2rem 0 7.3rem;
+        background:url("assets/image1Mobile.png");
+        background-position:100% 100%;
+        background-size:cover;
     }
-
-    .hambergerM {
-        width:40px;
-        position: absolute;
-        right:23px;
-        top:20px;
-    }
-
     .title {
-    
-    background :rgba(227, 228, 234, 0.89);
-    position: absolute;
-    
-    top: 15rem;
-    right: 0.7rem;
-    line-height:3.5rem;
-    
-    
-    
+        position: absolute;
+        top: 15rem;
+        right: 0.7rem;
+        background :rgba(227, 228, 234, 0.89);   
+        line-height:3.5rem;
     }
     .title h1 {
         font-size:3.75rem;
     }
-
-
     /* main section */
-    /* .info div {
-        float:none;
-    }
-    
-    .info  .image {
-        width:100%;
-    } */
-
-    .info1 .image{
-        /* float:none; */
-        /* width:100%; */
-        /* max-height: 204px;
-        overflow: hidden; */
-        
-    }
-    
-    .info .text{
+    .info .text {
         width: 100%;
         padding:1.9rem 0 3.3rem;
         text-align: center;
-
     }
-
-
-
     .info h2 {
-
+        margin: 0 0 1rem;
         letter-spacing: 0.02rem;
         font-size: 2.1rem;
-        margin: 0 0 1rem;
     }
-
     .info p {
-
+        margin: 0 1rem 1.2rem;
         font-size: 0.9rem;
-        margin: 0 1rem 0.8rem;
     }
-
     .info3 {
         padding:2.6rem 0 0 ;
-        
     }
-
     .info3 div.mobileAppear{
         margin: 0 1rem;
         width:calc(100% - 2rem);
     }
-
-    .info3 p {
-        text-align:left;
-    }
-    
-    .info3 a {
-        width:53.5%;
-
-    }
-
     .info4 {
         background-size: 1400px 550px;
-
         height: 550px;
         padding:1.5rem 0 1rem;
-
-
     }
     .userService {
-
         width: calc(100% - 6.5rem);
         margin: 0 3rem 0 3.5rem;
         padding: 1.6rem 2rem 0;
-
         font-family: "Nova Flat";
         font-weight: lighter;
-
-
-
     }
-
-    /* .userService .icon {
-        float:none;
-        width: 100%;
-        display: block;
-        margin:0.35rem auto;
-        padding-bottom:0.85rem;
-
-
-    } */
-
     .userService .fas {
         line-height: 3.2rem;
     }
@@ -1121,105 +831,58 @@ input::placeholder {
     .userService p {
         margin-top: 0.2rem;
         letter-spacing: 0.008rem;
-    
-
     }
-
-
-
     .gallery {
-        padding:2.8rem 0.4rem 2.5rem ;
+        padding:2.8rem 0.4rem 2.5rem;
     }
-
-
     .galleryWrapper img {
         margin: 0.9rem 0.4rem 0.5rem;
         width: calc((100% - 1.6rem) /2);
     }
-
-
     /* footer */
-
-
     .footerWrapper {
         padding: 2.3rem 0 1.3rem;
     }
-
     .menuSmall {
         margin: 0 3px 1rem 0;
         width:100%;
         padding: 0;
-
     }
-
-
-    .menuSmall ul{
-        width: 100%;
-    }
-    
-
-
-    /* .contact,
-    .form {
-        float:none;
-        display: block;
-        width:100%;
-
-        text-align: center;
-        margin-bottom: 1.5rem;
-    } */
-
     .footerWrapper h3 {
         font-size: 1.25rem;
         margin-top: 1.5rem;
         margin-bottom: 0.7rem;
     }
-
-
     .form {
         padding:0 1rem;
-    }
-    .form h3 {
-        margin-bottom: 1.5rem;
     }
     .form p {
         font-size: 0.9rem;
     }
-
     input,
     .btn{
         width: 100%;
     }
     input,
     input::placeholder {
+        padding: 6px 0 6px 0;
         font-size: 0.9rem;
         text-align: center;
-        padding: 6px 0 6px 0;
     }
-    
 }
 @media (max-width:360px) {
     .title {
-    
-    
-    
-    top: 14rem;
-    right: 0.8rem;
-    line-height:3rem;
-    
-    
-    
+        top: 14rem;
+        right: 0.8rem;
+        line-height:3rem;
     }
     .title h1 {
         font-size:3.25rem;
     }
-
-
     .info h2 {
-
+        margin: 0 0.8rem 0.8rem;
         letter-spacing: 0.01rem;
         font-size: 1.7rem;
-        margin: 0 0.8rem 0.8rem;
     }
     .userService {
         font-size: 1.3rem;
@@ -1228,25 +891,22 @@ input::placeholder {
     .gallery {
         padding: 2rem 0.4rem 2rem;
     }
-
     .footerWrapper {
         padding: 1.2rem 0 1.3rem;
     }
-
- 
+    .menuSmall {
+        font-size:0.9rem;
+    }
 }
 
 @media (max-width:320px) {
     .title {
-    top: 12rem;
-    right: 0.8rem;
-    line-height:2.5rem;
-    
-    
-    
+        top: 12rem;
+        line-height:2.5rem;
     }
     .title h1 {
         font-size:2.8rem;
     }
-
 }
+/* mobile layout ends */
+/* responsiveness ends */
